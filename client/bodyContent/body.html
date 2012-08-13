@@ -1,0 +1,15 @@
+<template name="bodyContent">	
+		<ul class="nav nav-list">
+			<li class="nav-header">Todo Lists </li>
+				<input type="text" id="new-todo" placeholder="Stuff I need to do.." class="span12 stretch-mobile"/>	
+			{{#each todos}}				
+				{{> todo}}
+			{{/each}}
+		</ul>
+</template>
+
+<template name="todo">
+	<li class="{{active}}">
+	   	<a href="#"><i class="icon-star"/> {{text}}</a>
+	</li>
+</template>

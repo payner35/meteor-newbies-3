@@ -1,0 +1,48 @@
+@padding: 0px;
+
+.stretch-for-mobile{
+	#new-list.stretch-mobile {
+			width: 100%; 
+	}
+	#new-todo.stretch-mobile {
+			width: 100%; 
+	}
+}
+
+ /* Landscape phones and down */
+  @media (min-width: 0px) and (max-width: 480px) {
+	body {
+	 	padding-top: @padding; 
+	 	color: #FF0000;			
+	}	
+	
+	.stretch-for-mobile
+}
+
+/* Landscape phone to portrait tablet */
+  @media  (min-width: 481px) and  (max-width: 767px) {
+	body {
+	 	padding-top: @padding; 
+	 	color: #88ff11;
+	}
+	
+	.stretch-for-mobile
+}
+
+
+/* Portrait tablet to landscape and desktop  */
+  @media (min-width: 768px) {
+	body {
+	 	padding-top: @padding; 
+	 	color: #3399ff;
+	}
+}
+
+/* Large desktop */
+  @media (min-width: 980px) { 
+	body {
+	 	padding-top: 60px; 
+	 	color: #ff99ff;
+	}
+}
+

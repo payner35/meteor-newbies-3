@@ -1,0 +1,36 @@
+<template name="side">	
+		<ul class="nav nav-list">
+			<li class="nav-header">
+				Todo Lists
+			</li>
+			{{#each lists}}				
+				{{> listItem}}
+			{{/each}}
+			<li class="divider"></li>
+			<div id="createList">
+				<input type="text" id="new-list" class="stretch-mobile span12" placeholder="New List">
+			</div>	
+		</ul>
+		
+		<div class="modal hide" id="deleteListModal">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">×</button>
+				<h3>Delete List</h3>
+			</div>
+			<div class="modal-body">
+				<p>Are you sure you want to delete this list… Someone may get hurt</p>
+				<img src="http://www.zeldauniverse.net/forums/members/5354344-albums2966-picture25106.jpg" width="50%"/>
+			</div>
+			<div class="modal-footer">
+				<a href="#" class="btn" data-dismiss="modal">Close</a>
+				<a href="#" class="btn btn-primary">Kill Justin</a>
+			</div>
+		</div>	
+</template>
+
+<template name="listItem">
+	<li class="{{active}}">
+	    	<a><i class="icon-minus remove-item" href="#deleteListModal" data-toggle="modal"/> {{name}}</a>
+	</li>
+</template>
+
